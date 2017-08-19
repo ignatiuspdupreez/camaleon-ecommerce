@@ -1,4 +1,4 @@
-class AddCamaEcommerceStructurePlugin < ActiveRecord::Migration
+class AddCamaEcommerceStructurePlugin < ActiveRecord::Migration[5.0]
   def change
     unless table_exists? 'plugins_order_details'
       create_table :plugins_order_details do |t|
