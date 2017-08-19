@@ -1,4 +1,4 @@
-class MigrateOrderData < ActiveRecord::Migration
+class MigrateOrderData < ActiveRecord::Migration[5.0]
   def change
     if table_exists?('plugins_order_details') && Plugins::Ecommerce::LegacyOrder.count > 0
       Plugins::Ecommerce::LegacyOrder.reset_column_information
